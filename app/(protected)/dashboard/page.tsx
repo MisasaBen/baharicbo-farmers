@@ -75,10 +75,9 @@ const trendBars = [45, 58, 52, 72, 64, 60, 69];
 
 export default function DashboardPage() {
   return (
-    <main className="min-h-screen bg-[var(--bahari-sand)] text-slate-900">
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         {/* Top bar */}
-        <div className="mb-8 flex flex-col gap-4 rounded-3xl border bg-white p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+        {/* <div className="mb-8 flex flex-col gap-4 rounded-3xl border bg-white p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
             <div className="relative h-12 w-12 overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm">
               <Image
@@ -106,7 +105,7 @@ export default function DashboardPage() {
               Export summary
             </Button>
           </div>
-        </div>
+        </div> */}
 
         {/* Page heading */}
         <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
@@ -306,7 +305,6 @@ export default function DashboardPage() {
           </Card>
         </section>
       </div>
-    </main>
   );
 }
 

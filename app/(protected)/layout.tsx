@@ -17,7 +17,7 @@ export default function ProtectedLayout({
     if (menuOpen) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = previous || "";
+      document.body.style.overflow = "";
     }
 
     return () => {
@@ -32,7 +32,9 @@ export default function ProtectedLayout({
 
         <div className="flex min-w-0 flex-1 flex-col">
           <FarmerHeader onOpenMenu={() => setMenuOpen(true)} />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 overflow-x-hidden">
+            {children}
+          </main>
         </div>
       </div>
 

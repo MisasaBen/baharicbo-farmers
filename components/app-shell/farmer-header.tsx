@@ -1,5 +1,7 @@
 "use client";
 
+import { useMemo } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, Bell, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -8,6 +10,50 @@ type FarmerHeaderProps = {
 };
 
 export function FarmerHeader({ onOpenMenu }: FarmerHeaderProps) {
+  const pathname = usePathname();
+
+  const pageMeta = useMemo(() => {
+    if (pathname === "/dashboard") {
+      return {
+        title: "Dashboard",
+        subtitle: "Monitoring overview",
+      };
+    }
+
+    if (pathname === "/records") {
+      return {
+        title: "Historical Records",
+        subtitle: "Past environmental measurements",
+      };
+    }
+
+    if (pathname === "/alerts") {
+      return {
+        title: "Alerts",
+        subtitle: "Warnings and site notifications",
+      };
+    }
+
+    if (pathname === "/profile") {
+      return {
+        title: "Profile",
+        subtitle: "Account and assigned site details",
+      };
+    }
+
+    if (pathname.startsWith("/sites/")) {
+      return {
+        title: "Site Details",
+        subtitle: "Monitoring site overview",
+      };
+    }
+
+    return {
+      title: "Farmer’s Link",
+      subtitle: "Monitoring dashboard",
+    };
+  }, [pathname]);
+
   return (
     <header className="sticky top-0 z-30 border-b bg-white/90 backdrop-blur">
       <div className="flex h-16 items-center justify-between px-4 sm:px-6">
@@ -22,10 +68,10 @@ export function FarmerHeader({ onOpenMenu }: FarmerHeaderProps) {
 
           <div>
             <div className="text-sm font-semibold text-[var(--bahari-blue)]">
-              Farmer’s Link
+              {pageMeta.title}
             </div>
             <div className="text-xs text-slate-500">
-              Monitoring dashboard
+              {pageMeta.subtitle}
             </div>
           </div>
         </div>

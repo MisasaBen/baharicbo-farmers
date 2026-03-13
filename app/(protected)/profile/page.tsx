@@ -17,7 +17,6 @@ const profile = {
 
 export default function ProfilePage() {
   return (
-    <main className="min-h-screen bg-[var(--bahari-sand)] text-slate-900">
       <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
         <div className="mb-8 flex items-center gap-3 rounded-3xl border bg-white p-4 shadow-sm">
           <div className="relative h-12 w-12 overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm">
@@ -96,7 +95,6 @@ export default function ProfilePage() {
           </Card>
         </div>
       </div>
-    </main>
   );
 }
 

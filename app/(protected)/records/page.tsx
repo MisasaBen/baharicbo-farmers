@@ -35,7 +35,6 @@ const trendBars = [42, 50, 56, 63, 58, 67, 61];
 
 export default function RecordsPage() {
   return (
-    <main className="min-h-screen bg-[var(--bahari-sand)] text-slate-900">
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         {/* Top bar */}
         <div className="mb-8 flex flex-col gap-4 rounded-3xl border bg-white p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
@@ -236,7 +235,6 @@ export default function RecordsPage() {
           </Card>
         </section>
       </div>
-    </main>
   );
 }
 

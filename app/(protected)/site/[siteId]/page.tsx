@@ -34,7 +34,6 @@ const metrics = [
 
 export default function SiteDetailPage() {
   return (
-    <main className="min-h-screen bg-[var(--bahari-sand)] text-slate-900">
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         <div className="mb-8 flex flex-col gap-4 rounded-3xl border bg-white p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
@@ -161,7 +160,6 @@ export default function SiteDetailPage() {
           </Card>
         </section>
       </div>
-    </main>
   );
 }
 

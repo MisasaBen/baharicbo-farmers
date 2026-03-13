@@ -68,7 +68,6 @@ const alerts = [
 
 export default function AlertsPage() {
   return (
-    <main className="min-h-screen bg-[var(--bahari-sand)] text-slate-900">
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         {/* Top bar */}
         <div className="mb-8 flex flex-col gap-4 rounded-3xl border bg-white p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
@@ -226,7 +225,6 @@ export default function AlertsPage() {
           ))}
         </section>
       </div>
-    </main>
   );
 }
 
