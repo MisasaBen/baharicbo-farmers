@@ -37,29 +37,36 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 ## Project Structure
+
+```text
 app/
   login/page.tsx
-  dashboard/page.tsx
-  sites/[siteId]/page.tsx
-  alerts/page.tsx
-  records/page.tsx
-  profile/page.tsx
-
+  (protected)/
+    layout.tsx
+    dashboard/page.tsx
+    sites/page.tsx
+    sites/[siteId]/page.tsx
+    alerts/page.tsx
+    records/page.tsx
+    profile/page.tsx
 components/
   app-shell/
-  dashboard/
-  charts/
-  alerts/
-  shared/
   ui/
-
 lib/
   mock-data.ts
   constants.ts
   utils.ts
-
 types/
   site.ts
   metrics.ts
   alert.ts
   user.ts
+```
+
+## Presentation build
+
+The Farmer’s Link screens are populated from a centralized local dataset in `lib/mock-data.ts`. The same sites, temperature readings, device connectivity, battery levels, and alert history are shared across the dashboard, site directory, site details, records, alerts, and profile screens. This keeps the presentation consistent and allows the data layer to be replaced with API responses later.
+
+The sign-in form currently accepts non-empty credentials and opens the dashboard for a presentation flow. It is not a substitute for backend authentication. Profile edits and alert acknowledgements update in-memory page state only; they are not persisted to a database.
+
+Before deployment, install dependencies with `npm ci`, run `npm run build`, and deploy the repository to the Farmer’s Link Vercel project. The intended app origin is `https://app.baharicbo.com`.

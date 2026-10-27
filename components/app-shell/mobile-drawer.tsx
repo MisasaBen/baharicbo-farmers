@@ -11,7 +11,6 @@ import {
   UserRound,
   X,
 } from "lucide-react";
-import { span } from "motion/react-client";
 
 type MobileDrawerProps = {
   open: boolean;
@@ -25,8 +24,8 @@ const navItems = [
     icon: LayoutDashboard,
   },
   {
-    label: "Site",
-    href: "/sites/imta-cage-1",
+    label: "Sites",
+    href: "/sites",
     icon: MapPinned,
   },
   {

@@ -20,8 +20,10 @@ export const metadata: Metadata = {
   description:
     "Farmer’s Link is the monitoring dashboard for the Bahari CBO Network Blue Empowerment (BE) Project. It provides environmental monitoring, alerts, and site records for climate-smart aquaculture.",
   applicationName: "Farmer’s Link",
+  metadataBase: new URL("https://app.baharicbo.com"),
   openGraph: {
     title: "Farmer’s Link",
+    url: "https://app.baharicbo.com",
     description:
       "Environmental monitoring dashboard for Bahari CBO Network aquaculture sites.",
     siteName: "Bahari CBO Network",

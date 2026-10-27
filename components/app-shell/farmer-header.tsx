@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { Menu, Bell, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -38,6 +39,13 @@ export function FarmerHeader({ onOpenMenu }: FarmerHeaderProps) {
       return {
         title: "Profile",
         subtitle: "Account and assigned site details",
+      };
+    }
+
+    if (pathname === "/sites") {
+      return {
+        title: "Monitoring Sites",
+        subtitle: "Site status and device connectivity",
       };
     }
 
@@ -79,16 +87,19 @@ export function FarmerHeader({ onOpenMenu }: FarmerHeaderProps) {
         <div className="flex items-center gap-2 sm:gap-3">
           <span className="hidden items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-700 sm:inline-flex">
             <ShieldCheck size={14} />
-            Secure access
+            Farmer workspace
           </span>
 
           <Button
+            asChild
             variant="outline"
             size="sm"
             className="rounded-2xl border-slate-200 bg-white hover:bg-slate-50"
           >
-            <Bell size={16} />
-            <span className="hidden sm:inline">Alerts</span>
+            <Link href="/alerts">
+              <Bell size={16} />
+              <span className="hidden sm:inline">Alerts</span>
+            </Link>
           </Button>
         </div>
       </div>

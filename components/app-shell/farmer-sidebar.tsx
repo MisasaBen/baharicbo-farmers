@@ -18,8 +18,8 @@ const navItems = [
     icon: LayoutDashboard,
   },
   {
-    label: "Site",
-    href: "/sites/imta-cage-1",
+    label: "Sites",
+    href: "/sites",
     icon: MapPinned,
   },
   {
